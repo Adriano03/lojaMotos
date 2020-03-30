@@ -1,7 +1,7 @@
 <div class="flex fill column lista-produtos">
 
   <div class="flex row produto" *ngFor="let produto of produtos">
-  
+
     <img [src]="produto.urlImagem">
 
     <div class="grow flex column descricao-produto">
@@ -22,7 +22,11 @@
           {{ produto.valor }}
         </h3>
         <div class="grow"></div>
-        <button mat-raised-button color="primary">Detalhes</button>
+
+        <button mat-raised-button color="primary">
+          <mat-icon>view_agenda</mat-icon>
+          Detalhes
+        </button>
       </div>
 
     </div>
