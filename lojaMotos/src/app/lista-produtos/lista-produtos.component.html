@@ -1,6 +1,12 @@
 <div class="flex fill column lista-produtos">
 
-  <h1>Loja De Motos</h1>
+  <h2>
+    <mat-toolbar color="primary">
+      <mat-icon>two_wheeler</mat-icon>
+      <span>Motorcycle Store</span>
+      <mat-icon>sports_motorsports</mat-icon>
+    </mat-toolbar>
+  </h2>
 
   <div class="flex row produto" *ngFor="let produto of produtos">
     <img [src]="produto.urlImagem">
@@ -23,7 +29,7 @@
           {{ produto.valor }}
         </h3>
         <div class="grow"></div>
-        <button>DETALHES</button>
+        <button mat-raised-button color="primary">Detalhes</button>
       </div>
 
     </div>
