@@ -1,14 +1,7 @@
 <div class="flex fill column lista-produtos">
 
-  <h2>
-    <mat-toolbar color="primary">
-      <mat-icon>two_wheeler</mat-icon>
-      <span>Motorcycle Store</span>
-      <mat-icon>sports_motorsports</mat-icon>
-    </mat-toolbar>
-  </h2>
-
   <div class="flex row produto" *ngFor="let produto of produtos">
+  
     <img [src]="produto.urlImagem">
 
     <div class="grow flex column descricao-produto">
