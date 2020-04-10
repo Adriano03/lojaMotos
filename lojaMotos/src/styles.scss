@@ -64,3 +64,28 @@ html {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #fafafa;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.formulario {
+  max-width: 512px;
+  margin: auto;
+}
+
+.dados-enviados {
+  margin: auto;
+  text-align: center;
+  margin-top: 32px;
+}

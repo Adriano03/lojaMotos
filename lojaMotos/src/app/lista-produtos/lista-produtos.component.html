@@ -1,12 +1,19 @@
-<div class="flex fill column lista-produtos">
+<button class="btnCadastrar" mat-raised-button color="warn" routerLink="/cadastroMoto">
+  <mat-icon>add</mat-icon>
+  Cadastrar Motocicleta
+</button>
 
-  <div class="flex row produto" *ngFor="let produto of produtos">
+<div class="flex fill column lista-produtos">
+  
+
+  <div class="flex row produto" *ngFor="let produto of motoService.dados">
 
     <img [src]="produto.urlImagem">
 
     <div class="grow flex column descricao-produto">
 
       <div>
+        
         <h2>
           {{ produto.titulo }}
         </h2>
@@ -19,7 +26,7 @@
 
       <div class="flex row">
         <h3>
-          {{ produto.valor }}
+          R$ {{ produto.valor }}
         </h3>
         <div class="grow"></div>
 

@@ -7,15 +7,24 @@ import { ListaProdutosComponent } from './lista-produtos/lista-produtos.componen
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { CadastroMotoComponent } from './cadastro-moto/cadastro-moto.component';
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MotoService } from './moto.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaProdutosComponent,
-    PaginaNaoEncontradaComponent
+    PaginaNaoEncontradaComponent,
+    CadastroMotoComponent
   ],
   imports: [
     BrowserModule,
@@ -23,9 +32,14 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [MotoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

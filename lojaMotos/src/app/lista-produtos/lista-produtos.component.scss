@@ -1,4 +1,6 @@
 .lista-produtos {
+
+    margin-top: 17px;
    
     h3 {
         font-weight: 500;
@@ -26,6 +28,8 @@
         img {
             flex-grow: 0;
             border-radius: 4px 0 0 4px;
+            width: 525px;
+            height: 340px;
         }
 
         .grow {
@@ -40,4 +44,8 @@
             font-size: 17px;
         }
     }
+}
+
+.btnCadastrar{
+    margin-left: 550px;
 }
