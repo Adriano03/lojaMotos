@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators, FormGroup } from '@angular/forms';
+import { FormControl, Validators, FormGroup, AbstractControl, ValidationErrors } from '@angular/forms';
 import { MotoService } from '../moto.service';
 import { Router } from '@angular/router';
 
@@ -12,10 +12,10 @@ export class CadastroMotoComponent implements OnInit {
 
   formulario = new FormGroup({
 
-    titulo: new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(25)]),
+    titulo: new FormControl(null, [Validators.required, Validators.minLength(2), Validators.maxLength(25)]),
     descricaoCurta: new FormControl(null, [Validators.required, Validators.minLength(10), Validators.maxLength(30)]),
     descricaoCompleta: new FormControl(null, [Validators.required, Validators.minLength(20), Validators.maxLength(200)]),
-    valor: new FormControl(null, [Validators.required, Validators.maxLength(20)]),
+    valor: new FormControl(null, [Validators.required, Validators.maxLength(20), this.validacaoNum] ),
     urlImagem: new FormControl(null, [Validators.required]),
 
   });
@@ -33,6 +33,17 @@ export class CadastroMotoComponent implements OnInit {
       this.router.navigateByUrl('produtos');
     }
   }
-  
+
+  validacaoNum(control: AbstractControl){
+
+    const numero = control.value;
+
+    if(!isNaN(Number(numero))){
+      return null;
+    }
+
+    return {validacaoNum: true};
+
+  }
 
 }

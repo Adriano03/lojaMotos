@@ -18,13 +18,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MotoService } from './moto.service';
+import { DetalhesComponent } from './detalhes/detalhes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaProdutosComponent,
     PaginaNaoEncontradaComponent,
-    CadastroMotoComponent
+    CadastroMotoComponent,
+    DetalhesComponent
   ],
   imports: [
     BrowserModule,

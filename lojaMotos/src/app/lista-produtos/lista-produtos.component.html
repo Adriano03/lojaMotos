@@ -6,7 +6,7 @@
 <div class="flex fill column lista-produtos">
   
 
-  <div class="flex row produto" *ngFor="let produto of motoService.dados">
+  <div class="flex row produto" *ngFor="let produto of motoService.dados; let id = index">
 
     <img [src]="produto.urlImagem">
 
@@ -30,7 +30,7 @@
         </h3>
         <div class="grow"></div>
 
-        <button mat-raised-button color="primary">
+        <button mat-raised-button color="primary" routerLink="/detalhes/{{id}}">
           <mat-icon>view_agenda</mat-icon>
           Detalhes
         </button>

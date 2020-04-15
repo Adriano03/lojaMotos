@@ -12,7 +12,7 @@
             <input matInput formControlName="titulo" name="Titulo">
             <mat-error *ngIf="formulario.controls['titulo'].hasError('required')">Campo em Branco!</mat-error>
             <mat-error *ngIf="formulario.controls['titulo'].hasError('maxlength')">O campo deve ter no máximo 25 caracteres!</mat-error>
-            <mat-error *ngIf="formulario.controls['titulo'].hasError('minlength')">O campo deve ter no minimo 4 caracteres!</mat-error>
+            <mat-error *ngIf="formulario.controls['titulo'].hasError('minlength')">O campo deve ter no minimo 2 caracteres!</mat-error>
 
         </mat-form-field>
         <br><br>
@@ -45,6 +45,7 @@
             <input matInput formControlName="valor" name="Valor">
             <mat-error *ngIf="formulario.controls['valor'].hasError('required')">Campo em Branco!</mat-error>
             <mat-error *ngIf="formulario.controls['valor'].hasError('maxlength')">O campo deve ter no máximo 20 números!</mat-error>
+            <mat-error *ngIf="formulario.controls['valor'].hasError('validacaoNum')">Caracter Inválido. Digite apenas Números!</mat-error>
         </mat-form-field>
         <br><br>
 
